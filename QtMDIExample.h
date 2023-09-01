@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <QtWidgets/QMainWindow>
 #include <QMdiArea>
@@ -23,13 +23,13 @@ public slots:
     void on_actionAddWindow_triggered();
     void on_actionCloseAll_triggered();
 
-    // в этот слот будут приходить уведомления о том, что в окно с номером numSubWindow отправлено сообщение strMessage
-    // слот должен найти нужное окно приконнектить к нему сигнал messageRetranslated, вызвать сигнал и отключить его
+    // РІ СЌС‚РѕС‚ СЃР»РѕС‚ Р±СѓРґСѓС‚ РїСЂРёС…РѕРґРёС‚СЊ СѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ С‚РѕРј, С‡С‚Рѕ РІ РѕРєРЅРѕ СЃ РЅРѕРјРµСЂРѕРј numSubWindow РѕС‚РїСЂР°РІР»РµРЅРѕ СЃРѕРѕР±С‰РµРЅРёРµ strMessage
+    // СЃР»РѕС‚ РґРѕР»Р¶РµРЅ РЅР°Р№С‚Рё РЅСѓР¶РЅРѕРµ РѕРєРЅРѕ РїСЂРёРєРѕРЅРЅРµРєС‚РёС‚СЊ Рє РЅРµРјСѓ СЃРёРіРЅР°Р» messageRetranslated, РІС‹Р·РІР°С‚СЊ СЃРёРіРЅР°Р» Рё РѕС‚РєР»СЋС‡РёС‚СЊ РµРіРѕ
     void retranslateMessage(const int numSubWindow, const QString& strMessage);
 
 private:
     Ui::QtMDIExampleClass ui;
-//  мои переменные
+//  РјРѕРё РїРµСЂРµРјРµРЅРЅС‹Рµ
     size_t      numSubWindows;
     QMdiArea*   pMdiArea;
 };

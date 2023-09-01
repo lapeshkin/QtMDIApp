@@ -1,4 +1,4 @@
-#include <QGridLayout>
+п»ї#include <QGridLayout>
 #include <QLabel>
 #include <QMdiSubWindow>
 
@@ -13,10 +13,10 @@ QtMDIExample::QtMDIExample(QWidget *parent)
     numSubWindows = 0;
 
     pMdiArea = new QMdiArea(this);
-    // Настраиваем скроллбары
+    // РќР°СЃС‚СЂР°РёРІР°РµРј СЃРєСЂРѕР»Р»Р±Р°СЂС‹
     pMdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     pMdiArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-    // Устанавливаем Mdi Area в качестве центрального виджета
+    // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј Mdi Area РІ РєР°С‡РµСЃС‚РІРµ С†РµРЅС‚СЂР°Р»СЊРЅРѕРіРѕ РІРёРґР¶РµС‚Р°
     setCentralWidget(pMdiArea);
 }
 
@@ -28,9 +28,9 @@ void QtMDIExample::on_actionAddWindow_triggered()
 {
     MapSubWindow* widget = new MapSubWindow(this);
     widget->setWindowNumber(++numSubWindows);
-    // Добавляем виджет в качестве подокна в Mdi Area
+    // Р”РѕР±Р°РІР»СЏРµРј РІРёРґР¶РµС‚ РІ РєР°С‡РµСЃС‚РІРµ РїРѕРґРѕРєРЅР° РІ Mdi Area
     pMdiArea->addSubWindow(widget);
-    // и показываем виджет
+    // Рё РїРѕРєР°Р·С‹РІР°РµРј РІРёРґР¶РµС‚
     widget->show();
 }
 
@@ -42,8 +42,8 @@ void QtMDIExample::on_actionCloseAll_triggered()
     }
 }
 
-// в этот слот будут приходить уведомления о том, что в окно с номером numSubWindow отправлено сообщение strMessage
-// слот должен найти нужное окно приконнектить к нему сигнал messageRetranslated, вызвать сигнал и отключить его
+// РІ СЌС‚РѕС‚ СЃР»РѕС‚ Р±СѓРґСѓС‚ РїСЂРёС…РѕРґРёС‚СЊ СѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ С‚РѕРј, С‡С‚Рѕ РІ РѕРєРЅРѕ СЃ РЅРѕРјРµСЂРѕРј numSubWindow РѕС‚РїСЂР°РІР»РµРЅРѕ СЃРѕРѕР±С‰РµРЅРёРµ strMessage
+// СЃР»РѕС‚ РґРѕР»Р¶РµРЅ РЅР°Р№С‚Рё РЅСѓР¶РЅРѕРµ РѕРєРЅРѕ РїСЂРёРєРѕРЅРЅРµРєС‚РёС‚СЊ Рє РЅРµРјСѓ СЃРёРіРЅР°Р» messageRetranslated, РІС‹Р·РІР°С‚СЊ СЃРёРіРЅР°Р» Рё РѕС‚РєР»СЋС‡РёС‚СЊ РµРіРѕ
 void QtMDIExample::retranslateMessage(const int numSubWindow, const QString& strMessage)
 {
     MapSubWindow* pSubWindow = nullptr;
