@@ -32,22 +32,6 @@ void QtMDIExample::on_actionAddWindow_triggered()
     pMdiArea->addSubWindow(widget);
     // и показываем виджет
     widget->show();
-
-    //// Создаём виджет, который будет окном
-    //QWidget* widget = new QWidget(pMdiArea);
-    //// Добавляем в него размещение
-    //QGridLayout* gridLayout = new QGridLayout(widget);
-    //widget->setLayout(gridLayout);
-    //// Добавляем на виджет надпись
-    //QLabel* label = new QLabel("Hello, I am sub window!!!", widget);
-    //gridLayout->addWidget(label);
-
-    //// Добавляем виджет в качестве подокна в Mdi Area
-    //pMdiArea->addSubWindow(widget);
-    //// Устанавливаем заголовок окна
-    //widget->setWindowTitle("Sub Window");
-    //// и показываем виджет
-    //widget->show();
 }
 
 void QtMDIExample::on_actionCloseAll_triggered()
@@ -58,6 +42,8 @@ void QtMDIExample::on_actionCloseAll_triggered()
     }
 }
 
+// в этот слот будут приходить уведомления о том, что в окно с номером numSubWindow отправлено сообщение strMessage
+// слот должен найти нужное окно приконнектить к нему сигнал messageRetranslated, вызвать сигнал и отключить его
 void QtMDIExample::retranslateMessage(const int numSubWindow, const QString& strMessage)
 {
     MapSubWindow* pSubWindow = nullptr;

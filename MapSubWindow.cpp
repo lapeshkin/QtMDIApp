@@ -18,7 +18,7 @@ MapSubWindow::MapSubWindow(QtMDIExample* pParent) :
 
     QtMDIExample* p = qobject_cast<QtMDIExample*>(pParent);
 
-   
+   // подключаю созданный сигнал messageSent к слоту retranslateMessage головного класса
     QObject::connect(this, &MapSubWindow::messageSent, qobject_cast<QtMDIExample*>(pParent), &QtMDIExample::retranslateMessage);
 
 }
