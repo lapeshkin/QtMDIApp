@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <QWidget>
 #include "ui_MapSubWindow.h"
@@ -22,7 +22,6 @@ signals:
     void messageSent(const int numSubWindow, const QString& strMessage);
 
 public slots:
-    //void onMessageReceived(const QString& strMessage);
     void onMessageReceived(const QString& strMessage);
     void on_sendButton_clicked();
 

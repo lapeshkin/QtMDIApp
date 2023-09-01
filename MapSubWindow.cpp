@@ -1,4 +1,4 @@
-#include <QGridLayout>
+﻿#include <QGridLayout>
 #include <QLabel>
 #include "MapSubWindow.h" 
 
@@ -13,12 +13,12 @@ MapSubWindow::MapSubWindow(QtMDIExample* pParent) :
     mapView = new MapGraphicView(this);
     ui.mapLayout->addWidget(mapView);
 
-    // ������������ ��������� ����
+    // Устанавливаю заголовок окна
     this->setWindowTitle("Sub Window");
 
     QtMDIExample* p = qobject_cast<QtMDIExample*>(pParent);
 
-   
+   // подключаю созданный сигнал messageSent к слоту retranslateMessage головного класса
     QObject::connect(this, &MapSubWindow::messageSent, qobject_cast<QtMDIExample*>(pParent), &QtMDIExample::retranslateMessage);
 
 }

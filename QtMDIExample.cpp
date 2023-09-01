@@ -1,4 +1,4 @@
-#include <QGridLayout>
+Ôªø#include <QGridLayout>
 #include <QLabel>
 #include <QMdiSubWindow>
 
@@ -13,10 +13,10 @@ QtMDIExample::QtMDIExample(QWidget *parent)
     numSubWindows = 0;
 
     pMdiArea = new QMdiArea(this);
-    // Õ‡ÒÚ‡Ë‚‡ÂÏ ÒÍÓÎÎ·‡˚
+    // –ù–∞—Å—Ç—Ä–∞–∏–≤–∞–µ–º —Å–∫—Ä–æ–ª–ª–±–∞—Ä—ã
     pMdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     pMdiArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-    // ”ÒÚ‡Ì‡‚ÎË‚‡ÂÏ Mdi Area ‚ Í‡˜ÂÒÚ‚Â ˆÂÌÚ‡Î¸ÌÓ„Ó ‚Ë‰ÊÂÚ‡
+    // –£—Å—Ç–∞–Ω–∞–≤–ª–∏–≤–∞–µ–º Mdi Area –≤ –∫–∞—á–µ—Å—Ç–≤–µ —Ü–µ–Ω—Ç—Ä–∞–ª—å–Ω–æ–≥–æ –≤–∏–¥–∂–µ—Ç–∞
     setCentralWidget(pMdiArea);
 }
 
@@ -28,26 +28,10 @@ void QtMDIExample::on_actionAddWindow_triggered()
 {
     MapSubWindow* widget = new MapSubWindow(this);
     widget->setWindowNumber(++numSubWindows);
-    // ƒÓ·‡‚ÎˇÂÏ ‚Ë‰ÊÂÚ ‚ Í‡˜ÂÒÚ‚Â ÔÓ‰ÓÍÌ‡ ‚ Mdi Area
+    // –î–æ–±–∞–≤–ª—è–µ–º –≤–∏–¥–∂–µ—Ç –≤ –∫–∞—á–µ—Å—Ç–≤–µ –ø–æ–¥–æ–∫–Ω–∞ –≤ Mdi Area
     pMdiArea->addSubWindow(widget);
-    // Ë ÔÓÍ‡Á˚‚‡ÂÏ ‚Ë‰ÊÂÚ
+    // –∏ –ø–æ–∫–∞–∑—ã–≤–∞–µ–º –≤–∏–¥–∂–µ—Ç
     widget->show();
-
-    //// —ÓÁ‰‡∏Ï ‚Ë‰ÊÂÚ, ÍÓÚÓ˚È ·Û‰ÂÚ ÓÍÌÓÏ
-    //QWidget* widget = new QWidget(pMdiArea);
-    //// ƒÓ·‡‚ÎˇÂÏ ‚ ÌÂ„Ó ‡ÁÏÂ˘ÂÌËÂ
-    //QGridLayout* gridLayout = new QGridLayout(widget);
-    //widget->setLayout(gridLayout);
-    //// ƒÓ·‡‚ÎˇÂÏ Ì‡ ‚Ë‰ÊÂÚ Ì‡‰ÔËÒ¸
-    //QLabel* label = new QLabel("Hello, I am sub window!!!", widget);
-    //gridLayout->addWidget(label);
-
-    //// ƒÓ·‡‚ÎˇÂÏ ‚Ë‰ÊÂÚ ‚ Í‡˜ÂÒÚ‚Â ÔÓ‰ÓÍÌ‡ ‚ Mdi Area
-    //pMdiArea->addSubWindow(widget);
-    //// ”ÒÚ‡Ì‡‚ÎË‚‡ÂÏ Á‡„ÓÎÓ‚ÓÍ ÓÍÌ‡
-    //widget->setWindowTitle("Sub Window");
-    //// Ë ÔÓÍ‡Á˚‚‡ÂÏ ‚Ë‰ÊÂÚ
-    //widget->show();
 }
 
 void QtMDIExample::on_actionCloseAll_triggered()
@@ -58,6 +42,8 @@ void QtMDIExample::on_actionCloseAll_triggered()
     }
 }
 
+// –≤ —ç—Ç–æ—Ç —Å–ª–æ—Ç –±—É–¥—É—Ç –ø—Ä–∏—Ö–æ–¥–∏—Ç—å —É–≤–µ–¥–æ–º–ª–µ–Ω–∏—è –æ —Ç–æ–º, —á—Ç–æ –≤ –æ–∫–Ω–æ —Å –Ω–æ–º–µ—Ä–æ–º numSubWindow –æ—Ç–ø—Ä–∞–≤–ª–µ–Ω–æ —Å–æ–æ–±—â–µ–Ω–∏–µ strMessage
+// —Å–ª–æ—Ç –¥–æ–ª–∂–µ–Ω –Ω–∞–π—Ç–∏ –Ω—É–∂–Ω–æ–µ –æ–∫–Ω–æ –ø—Ä–∏–∫–æ–Ω–Ω–µ–∫—Ç–∏—Ç—å –∫ –Ω–µ–º—É —Å–∏–≥–Ω–∞–ª messageRetranslated, –≤—ã–∑–≤–∞—Ç—å —Å–∏–≥–Ω–∞–ª –∏ –æ—Ç–∫–ª—é—á–∏—Ç—å –µ–≥–æ
 void QtMDIExample::retranslateMessage(const int numSubWindow, const QString& strMessage)
 {
     MapSubWindow* pSubWindow = nullptr;

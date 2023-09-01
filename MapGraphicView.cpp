@@ -1,41 +1,41 @@
-#include "MapGraphicView.h"
+ï»¿#include "MapGraphicView.h"
 
 MapGraphicView::MapGraphicView(QWidget* parent)
     : QGraphicsView(parent)
 {
 
-    /* Íåìíîãî ïîäíàñòðîèì îòîáðàæåíèå âèäæåòà è åãî ñîäåðæèìîãî */
-    this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // Îòêëþ÷èì ñêðîëëáàð ïî ãîðèçîíòàëè
-    this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);   // Îòêëþ÷èì ñêðîëëáàð ïî âåðòèêàëè
-    this->setAlignment(Qt::AlignCenter);                        // Äåëàåì ïðèâÿçêó ñîäåðæèìîãî ê öåíòðó
-    this->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);    // Ðàñòÿãèâàåì ñîäåðæèìîå ïî âèäæåòó
+    /* ÐÐµÐ¼Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð´Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¸Ð¼ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð° Ð¸ ÐµÐ³Ð¾ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾ */
+    this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // ÐžÑ‚ÐºÐ»ÑŽÑ‡Ð¸Ð¼ ÑÐºÑ€Ð¾Ð»Ð»Ð±Ð°Ñ€ Ð¿Ð¾ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»Ð¸
+    this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);   // ÐžÑ‚ÐºÐ»ÑŽÑ‡Ð¸Ð¼ ÑÐºÑ€Ð¾Ð»Ð»Ð±Ð°Ñ€ Ð¿Ð¾ Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»Ð¸
+    this->setAlignment(Qt::AlignCenter);                        // Ð”ÐµÐ»Ð°ÐµÐ¼ Ð¿Ñ€Ð¸Ð²ÑÐ·ÐºÑƒ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾ Ðº Ñ†ÐµÐ½Ñ‚Ñ€Ñƒ
+    this->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);    // Ð Ð°ÑÑ‚ÑÐ³Ð¸Ð²Ð°ÐµÐ¼ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ð¿Ð¾ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ñƒ
 
-    /* Òàêæå çàäàäèì ìèíèìàëüíûå ðàçìåðû âèäæåòà
+    /* Ð¢Ð°ÐºÐ¶Ðµ Ð·Ð°Ð´Ð°Ð´Ð¸Ð¼ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð°
      * */
     this->setMinimumHeight(100);
     this->setMinimumWidth(100);
 
-    scene = new QGraphicsScene();   // Èíèöèàëèçèðóåì ñöåíó äëÿ îòðèñîâêè
-    this->setScene(scene);          // Óñòàíàâëèâàåì ñöåíó â âèäæåò
+    scene = new QGraphicsScene();   // Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ ÑÑ†ÐµÐ½Ñƒ Ð´Ð»Ñ Ð¾Ñ‚Ñ€Ð¸ÑÐ¾Ð²ÐºÐ¸
+    this->setScene(scene);          // Ð£ÑÑ‚Ð°Ð½Ð°Ð²Ð»Ð¸Ð²Ð°ÐµÐ¼ ÑÑ†ÐµÐ½Ñƒ Ð² Ð²Ð¸Ð´Ð¶ÐµÑ‚
 
-    group_1 = new QGraphicsItemGroup(); // Èíèöèàëèçèðóåì ïåðâóþ ãðóïïó ýëåìåíòîâ
-    group_2 = new QGraphicsItemGroup(); // Èíèöèàëèçèðóåì âòîðóþ ãðóïïó ýëåìåíòîâ
+    group_1 = new QGraphicsItemGroup(); // Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ Ð¿ÐµÑ€Ð²ÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²
+    group_2 = new QGraphicsItemGroup(); // Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ Ð²Ñ‚Ð¾Ñ€ÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²
 
-    scene->addItem(group_1);            // Äîáàâëÿåì ïåðâóþ ãðóïïó â ñöåíó
-    scene->addItem(group_2);            // Äîáàâëÿåì âòîðóþ ãðóïïó â ñöåíó
+    scene->addItem(group_1);            // Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼ Ð¿ÐµÑ€Ð²ÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ Ð² ÑÑ†ÐµÐ½Ñƒ
+    scene->addItem(group_2);            // Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼ Ð²Ñ‚Ð¾Ñ€ÑƒÑŽ Ð³Ñ€ÑƒÐ¿Ð¿Ñƒ Ð² ÑÑ†ÐµÐ½Ñƒ
 
-    //timer = new QTimer();               // Èíèöèàëèçèðóåì Òàéìåð
+    //timer = new QTimer();               // Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€ÑƒÐµÐ¼ Ð¢Ð°Ð¹Ð¼ÐµÑ€
     //timer->setSingleShot(true);
-    //// Ïîäêëþ÷àåì ÑËÎÒ äëÿ îòðèñîâêè ê òàéìåðó
+    //// ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡Ð°ÐµÐ¼ Ð¡Ð›ÐžÐ¢ Ð´Ð»Ñ Ð¾Ñ‚Ñ€Ð¸ÑÐ¾Ð²ÐºÐ¸ Ðº Ñ‚Ð°Ð¹Ð¼ÐµÑ€Ñƒ
     //connect(timer, SIGNAL(timeout()), this, SLOT(slotAlarmTimer()));
-    //timer->start(50);                   // Ñòàðòóåì òàéìåð íà 50 ìèëëèñåêóíä
+    //timer->start(50);                   // Ð¡Ñ‚Ð°Ñ€Ñ‚ÑƒÐµÐ¼ Ñ‚Ð°Ð¹Ð¼ÐµÑ€ Ð½Ð° 50 Ð¼Ð¸Ð»Ð»Ð¸ÑÐµÐºÑƒÐ½Ð´
 }
 
 MapGraphicView::~MapGraphicView()
 {
     if (scene)
     {
-        // ñöåíà ñàìà óäàëèò âñå âêëþ÷åííûå â íå¸ ýëåìåíòû
+        // ÑÑ†ÐµÐ½Ð° ÑÐ°Ð¼Ð° ÑƒÐ´Ð°Ð»Ð¸Ñ‚ Ð²ÑÐµ Ð²ÐºÐ»ÑŽÑ‡ÐµÐ½Ð½Ñ‹Ðµ Ð² Ð½ÐµÑ‘ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹
         delete scene;
         scene = nullptr;
     }
@@ -43,15 +43,15 @@ MapGraphicView::~MapGraphicView()
 
 void MapGraphicView::resizeEvent(QResizeEvent* event)
 {
-    //timer->start(50);   // Êàê òîëüêî ñîáûòèå ïðîèçîøëî ñòàðòóåì òàéìåð äëÿ îòðèñîâêè
+    //timer->start(50);   // ÐšÐ°Ðº Ñ‚Ð¾Ð»ÑŒÐºÐ¾ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð¾ÑˆÐ»Ð¾ ÑÑ‚Ð°Ñ€Ñ‚ÑƒÐµÐ¼ Ñ‚Ð°Ð¹Ð¼ÐµÑ€ Ð´Ð»Ñ Ð¾Ñ‚Ñ€Ð¸ÑÐ¾Ð²ÐºÐ¸
     draw();
-    QGraphicsView::resizeEvent(event);  // Çàïóñêàåì ñîáûòèå ðîäèòåëüêîãî êëàññà
+    QGraphicsView::resizeEvent(event);  // Ð—Ð°Ð¿ÑƒÑÐºÐ°ÐµÐ¼ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÐºÐ¾Ð³Ð¾ ÐºÐ»Ð°ÑÑÐ°
 }
 
 void MapGraphicView::deleteItemsFromGroup(QGraphicsItemGroup* group)
 {
-    /* Ïåðåáèðàåì âñå ýëåìåíòû ñöåíû, è åñëè îíè ïðèíàäëåæàò ãðóïïå,
-     * ïåðåäàííîé â ìåòîä, òî óäàëÿåì èõ
+    /* ÐŸÐµÑ€ÐµÐ±Ð¸Ñ€Ð°ÐµÐ¼ Ð²ÑÐµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÑ†ÐµÐ½Ñ‹, Ð¸ ÐµÑÐ»Ð¸ Ð¾Ð½Ð¸ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð°Ñ‚ Ð³Ñ€ÑƒÐ¿Ð¿Ðµ,
+     * Ð¿ÐµÑ€ÐµÐ´Ð°Ð½Ð½Ð¾Ð¹ Ð² Ð¼ÐµÑ‚Ð¾Ð´, Ñ‚Ð¾ ÑƒÐ´Ð°Ð»ÑÐµÐ¼ Ð¸Ñ…
      * */
     foreach(QGraphicsItem * item, scene->items(group->boundingRect())) {
         if (item->group() == group) {
@@ -62,34 +62,34 @@ void MapGraphicView::deleteItemsFromGroup(QGraphicsItemGroup* group)
 
 void MapGraphicView::draw()
 {
-    /* Óäàëÿåì âñå ýëåìåíòû ñî ñöåíû,
-     * åñëè îíè åñòü ïåðåä íîâîé îòðèñîâêîé
+    /* Ð£Ð´Ð°Ð»ÑÐµÐ¼ Ð²ÑÐµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ ÑÐ¾ ÑÑ†ÐµÐ½Ñ‹,
+     * ÐµÑÐ»Ð¸ Ð¾Ð½Ð¸ ÐµÑÑ‚ÑŒ Ð¿ÐµÑ€ÐµÐ´ Ð½Ð¾Ð²Ð¾Ð¹ Ð¾Ñ‚Ñ€Ð¸ÑÐ¾Ð²ÐºÐ¾Ð¹
      * */
     deleteItemsFromGroup(group_1);
     deleteItemsFromGroup(group_2);
 
-    int width = this->width();      // îïðåäåëÿåì øèðèíó íàøåãî âèäæåòà
-    int height = this->height();    // îïðåäåëÿåì âûñîòó íàøåãî âèäæåòà
+    int width = this->width();      // Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÐ¼ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð°
+    int height = this->height();    // Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÐ¼ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð°
 
-    /* Óñòàíàâëèâàåì ðàçìåð ñöåíû ïî ðàçìåðó âèäæåòà
-     * Ïåðâàÿ êîîðäèíàòà - ýòî ëåâûé âåðõíèé óãîë,
-     * à Âòîðàÿ - ýòî ïðàâûé íèæíèé óãîë
+    /* Ð£ÑÑ‚Ð°Ð½Ð°Ð²Ð»Ð¸Ð²Ð°ÐµÐ¼ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ†ÐµÐ½Ñ‹ Ð¿Ð¾ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñƒ Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð°
+     * ÐŸÐµÑ€Ð²Ð°Ñ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð° - ÑÑ‚Ð¾ Ð»ÐµÐ²Ñ‹Ð¹ Ð²ÐµÑ€Ñ…Ð½Ð¸Ð¹ ÑƒÐ³Ð¾Ð»,
+     * Ð° Ð’Ñ‚Ð¾Ñ€Ð°Ñ - ÑÑ‚Ð¾ Ð¿Ñ€Ð°Ð²Ñ‹Ð¹ Ð½Ð¸Ð¶Ð½Ð¸Ð¹ ÑƒÐ³Ð¾Ð»
      * */
     scene->setSceneRect(0, 0, width, height);
 
-    /* Ïðèñòóïàåì ê îòðèñîâêå ïðîèçâîëüíîé êàðòèíêè
+    /* ÐŸÑ€Ð¸ÑÑ‚ÑƒÐ¿Ð°ÐµÐ¼ Ðº Ð¾Ñ‚Ñ€Ð¸ÑÐ¾Ð²ÐºÐµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð»ÑŒÐ½Ð¾Ð¹ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ¸
      * */
-    QPen penBlack(Qt::black); // Çàäà¸ì ÷¸ðíóþ êèñòü
-    QPen penRed(Qt::red);   // Çàäà¸ì êðàñíóþ êèñòü
+    QPen penBlack(Qt::black); // Ð—Ð°Ð´Ð°Ñ‘Ð¼ Ñ‡Ñ‘Ñ€Ð½ÑƒÑŽ ÐºÐ¸ÑÑ‚ÑŒ
+    QPen penRed(Qt::red);   // Ð—Ð°Ð´Ð°Ñ‘Ð¼ ÐºÑ€Ð°ÑÐ½ÑƒÑŽ ÐºÐ¸ÑÑ‚ÑŒ
 
-    /* Íàðèñóåì ÷åðíûé ïðÿìîóãîëüíèê
+    /* ÐÐ°Ñ€Ð¸ÑÑƒÐµÐ¼ Ñ‡ÐµÑ€Ð½Ñ‹Ð¹ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº
      * */
     group_1->addToGroup(scene->addLine(20, 20, width - 20, 20, penBlack));
     group_1->addToGroup(scene->addLine(width - 20, 20, width - 20, height - 20, penBlack));
     group_1->addToGroup(scene->addLine(width - 20, height - 20, 20, height - 20, penBlack));
     group_1->addToGroup(scene->addLine(20, height - 20, 20, 20, penBlack));
 
-    /* Íàðèñóåì êðàñíûé êâàäðàò
+    /* ÐÐ°Ñ€Ð¸ÑÑƒÐµÐ¼ ÐºÑ€Ð°ÑÐ½Ñ‹Ð¹ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚
      * */
     int sideOfSquare = (height > width) ? (width - 60) : (height - 60);
     int centerOfWidget_X = width / 2;

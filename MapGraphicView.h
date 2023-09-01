@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <QGraphicsView>
 #include <QGraphicsItemGroup>
@@ -13,8 +13,8 @@ public:
     ~MapGraphicView();
 
 private:
-    /* Перегружаем событие изменения размера окна,
-     * чтобы перехватывать его
+    /* РџРµСЂРµРіСЂСѓР¶Р°РµРј СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ СЂР°Р·РјРµСЂР° РѕРєРЅР°,
+     * С‡С‚РѕР±С‹ РїРµСЂРµС…РІР°С‚С‹РІР°С‚СЊ РµРіРѕ
      * */
     void resizeEvent(QResizeEvent* event);
     void draw();
