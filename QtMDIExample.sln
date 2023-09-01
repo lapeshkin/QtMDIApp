@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtMDIExample", "QtMDIExample.vcxproj", "{7591E453-AE42-4B40-BB8D-B5022F66A4D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7591E453-AE42-4B40-BB8D-B5022F66A4D5}.Debug|x64.ActiveCfg = Debug|x64
+		{7591E453-AE42-4B40-BB8D-B5022F66A4D5}.Debug|x64.Build.0 = Debug|x64
+		{7591E453-AE42-4B40-BB8D-B5022F66A4D5}.Release|x64.ActiveCfg = Release|x64
+		{7591E453-AE42-4B40-BB8D-B5022F66A4D5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {708AC6F1-821A-402B-942F-EC099BDEBD4F}
+	EndGlobalSection
+EndGlobal
