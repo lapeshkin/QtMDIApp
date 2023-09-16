@@ -46,12 +46,30 @@
     <ClCompile Include="MapGraphicView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RateChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RateMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RateFileLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MapGraphicView.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="MapSubWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RateChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RateMap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RateFileLoader.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

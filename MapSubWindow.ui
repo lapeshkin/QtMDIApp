@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>901</width>
-    <height>428</height>
+    <width>861</width>
+    <height>574</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,109 +15,64 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,10">
      <item>
-      <layout class="QVBoxLayout" name="inputLayout">
+      <layout class="QHBoxLayout" name="infoLayout" stretch="1,2,2,3">
        <item>
-        <widget class="QLabel" name="labelSubWindowNumber">
-         <property name="font">
-          <font>
-           <pointsize>13</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,6">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Win. №</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineWindowNumber">
-           <property name="inputMethodHints">
-            <set>Qt::ImhDigitsOnly</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Message text:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineMessageText"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QPushButton" name="sendButton">
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Send</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelMessageText">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>60</height>
-          </size>
-         </property>
+        <widget class="QLabel" name="currencyNameLabel">
          <property name="text">
           <string>TextLabel</string>
          </property>
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+        <widget class="QDateEdit" name="beginDate"/>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="endDate"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadButton">
+         <property name="text">
+          <string>Load Data</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="loadDataLayout" stretch="1,1,10,1">
+       <item>
+        <widget class="QRadioButton" name="radioButtonFromFile">
+         <property name="text">
+          <string>From file</string>
          </property>
-        </spacer>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButtonOnline">
+         <property name="text">
+          <string>Online</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="resourceName"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="selectFileButton">
+         <property name="text">
+          <string>Select file...</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QVBoxLayout" name="mapLayout">
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
       </layout>
      </item>
     </layout>

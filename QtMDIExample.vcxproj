@@ -92,6 +92,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="RateChart.cpp" />
+    <ClCompile Include="RateFileLoader.cpp" />
+    <ClCompile Include="RateMap.cpp" />
     <QtUic Include="MapSubWindow.ui" />
     <QtUic Include="QtMDIExample.ui" />
     <QtMoc Include="QtMDIExample.h" />
@@ -103,6 +106,15 @@
   <ItemGroup>
     <QtMoc Include="MapGraphicView.h" />
     <QtMoc Include="MapSubWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RateChart.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RateMap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="RateFileLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

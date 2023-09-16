@@ -25,30 +25,20 @@
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>Окна</string>
+     <string>Window</string>
     </property>
     <addaction name="actionCloseAll"/>
     <addaction name="action_3"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>Файл</string>
+     <string>File</string>
     </property>
     <addaction name="actionAddWindow"/>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuTest">
-    <property name="title">
-     <string>Test</string>
-    </property>
-    <addaction name="actionSetWindow1"/>
-    <addaction name="actionSetWindow2"/>
-    <addaction name="actionSetWindow3"/>
-    <addaction name="actionSendMessage"/>
-   </widget>
    <addaction name="menu_2"/>
    <addaction name="menu"/>
-   <addaction name="menuTest"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -66,7 +56,7 @@
   </action>
   <action name="actionAddWindow">
    <property name="text">
-    <string>Новый</string>
+    <string>New window</string>
    </property>
   </action>
   <action name="action_2">
@@ -76,17 +66,17 @@
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>Выход</string>
+    <string>Exit</string>
    </property>
   </action>
   <action name="actionCloseAll">
    <property name="text">
-    <string>Закрыть все</string>
+    <string>Close All</string>
    </property>
   </action>
   <action name="action_3">
    <property name="text">
-    <string>Переключиться</string>
+    <string>Switch</string>
    </property>
   </action>
   <action name="actionSetWindow1">
